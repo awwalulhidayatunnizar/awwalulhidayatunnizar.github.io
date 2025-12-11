@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mbk Khot Rias & Salon - Wedding Organizer & Salon Potong Rambut</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Playfair Display', serif;
+        }
+        .hero-bg {
+            background-image: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.3)), url('https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/dd6f72fb-d22e-4857-8de9-7fe9714a55d8.png');
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            backdrop-filter: blur(1px);
+        }
+        .luxury-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f8f8 100%);
+            border: 1px solid #e5e5e5;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.5s ease;
+        }
+        .luxury-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        .gold-accent {
+            color: #FFD700;
+        }
+        .section-bg-white {
+            background: linear-gradient(to bottom, #ffffff 0%, #fdfdfd 100%);
+        }
+        .section-bg-gray {
+            background: linear-gradient(to bottom, #f8fafc 0%, #e2e8f0 100%);
+        }
+        .luxury-button {
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            color: #000;
+            font-weight: bold;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+        }
+        .luxury-button:hover {
+            background: linear-gradient(45deg, #FFA500, #FFD700);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+        }
+        .floating-effect {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        .gallery-item img {
+            filter: sepia(0.2) contrast(1.1);
+            transition: filter 0.5s ease;
+        }
+        .gallery-item:hover img {
+            filter: sepia(0) contrast(1.2) brightness(1.1);
+        }
+        .divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, #FFD700, transparent);
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-900 bg-gray-50">
+
+    <!-- Header -->
+    <header class="bg-black bg-opacity-90 shadow-2xl sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-5 flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/fb80f2e3-e7e0-47d6-bb11-e92ed72f7929.png" alt="Mbk Khot Rias & Salon luxurious logo featuring ornate gold floral emblem surrounded by elegant cursive typography, evoking exclusivity and sophistication for premium wedding planning and beauty treatments" class="w-20 h-20 rounded-full border-4 border-gold-500 shadow-lg" />
+                <h1 class="text-3xl font-bold text-white">Example  Wedding </h1>
+            </div>
+            <ul class="hidden md:flex space-x-10">
+                <li><a href="#hero" class="text-white hover:text-gold-500 transition duration-300 font-medium">Beranda</a></li>
+                <li><a href="#wedding" class="text-white hover:text-gold-500 transition duration-300 font-medium">Wedding Organizer</a></li>
+                <li><a href="#salon" class="text-white hover:text-gold-500 transition duration-300 font-medium">Salon Potong Rambut</a></li>
+                <li><a href="#testimonials" class="text-white hover:text-gold-500 transition duration-300 font-medium">Testimoni</a></li>
+                <li><a href="#gallery" class="text-white hover:text-gold-500 transition duration-300 font-medium">Galeri</a></li>
+                <li><a href="#contact" class="text-white hover:text-gold-500 transition duration-300 font-medium">Kontak</a></li>
+            </ul>
+            <button class="md:hidden text-white" onclick="toggleMenu()">
+                <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-black bg-opacity-95 p-6">
+            <ul class="space-y-4">
+                <li><a href="#hero" class="block text-white hover:text-gold-500 transition font-medium">Beranda</a></li>
+                <li><a href="#wedding" class="block text-white hover:text-gold-500 transition font-medium">Wedding Organizer</a></li>
+                <li><a href="#salon" class="block text-white hover:text-gold-500 transition font-medium">Salon Potong Rambut</a></li>
+                <li><a href="#testimonials" class="block text-white hover:text-gold-500 transition font-medium">Testimoni</a></li>
+                <li><a href="#gallery" class="block text-white hover:text-gold-500 transition font-medium">Galeri</a></li>
+                <li><a href="#contact" class="block text-white hover:text-gold-500 transition font-medium">Kontak</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section id="hero" class="hero-bg text-white flex items-center justify-center relative">
+        <div class="text-center px-6 py-16 max-w-5xl">
+            <h2 class="text-6xl font-extralight mb-6 floating-effect tracking-wide leading-tight">Mari Mewujudkan Momen Abadi dengan Sentuhan Keanggunan </h2>
+            <p class="text-xl mb-10 max-w-3xl mx-auto opacity-90 font-light tracking-wide">Di Example Rias & Salon, kami tidak hanya merancang acara dan merawat rambut — kami menciptakan pengalaman mewah yang memancarkan pesona dan keindahan sejati Anda, dari hari pertama hingga momen terakhir.</p>
+            <a href="#contact" class="luxury-button py-4 px-12 rounded-full font-semibold text-lg mr-6 transition shadow-lg">Rasakan Kemewahan Sekarang</a>
+            <a href="#wedding" class="bg-transparent border-2 border-white hover:bg-white hover:text-black text-white py-4 px-12 rounded-full font-semibold transition duration-300 shadow-lg">Jelajahi Layanan Kami</a>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0">
+            <svg viewBox="0 0 1200 120" fill="#f8fafc" preserveAspectRatio="none" class="w-full h-20">
+                <path d="m0,120 C150,90 350,60 600,90 C850,120 1050,90 1200,60 V120 H0 Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Wedding Organizer Section -->
+    <section id="wedding" class="section-bg-white py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl font-light text-center mb-16 gold-accent tracking-wide">Layanan Wedding Organizer Eksklusif</h2>
+            <p class="text-center text-gray-700 mb-16 max-w-4xl mx-auto text-lg font-light leading-relaxed">Kami hadir untuk mengubah impian pernikahan Anda menjadi mahakarya yang memukau, dengan detail yang dirancang khusus untuk menciptakan momen yang tak terlupakan dan penuh kemewahan.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="luxury-card p-10 rounded-2xl text-center shadow-2xl">
+                    <div class="mb-8">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/46385642-b95b-42f3-902b-58c3798af5d0.png" alt="Intimate and opulent consultation room for high-end wedding planning featuring velvet upholstery, shimmering chandeliers, gilded frames, and personalized mood boards on antique tables with fresh orchid arrangements" class="w-full h-56 object-cover rounded-xl mb-6 shadow-lg" />
+                    </div>
+                    <h3 class="text-2xl font-bold mb-6 gold-accent tracking-wide">Perencanaan Personal Berkelas</h3>
+                    <p class="text-gray-600 mb-6 font-light leading-relaxed">Konsultasi eksklusif dengan desainer pernikahan kami yang berpengalaman, menciptakan konsep unik yang mencerminkan kepribadian dan gaya Anda.</p>
+                    <button class="luxury-button py-3 px-8 rounded-full text-sm shadow-md">Pelajari Detail</button>
+                </div>
+                <div class="luxury-card p-10 rounded-2xl text-center shadow-2xl">
+                    <div class="mb-8">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/90b87d3f-f267-4511-a626-5f25a9e7159f.png" alt="Majestic wedding ceremony archway adorned with cascading silk ribbons, opulent floral garlands, marble columns, and ambient lighting in a grand ballroom setting with velvet curtains and crystal accents" class="w-full h-56 object-cover rounded-xl mb-6 shadow-lg" />
+                    </div>
+                    <h3 class="text-2xl font-bold mb-6 gold-accent tracking-wide">Dekorasi Mewah & Berkelas</h3>
+                    <p class="text-gray-600 mb-6 font-light leading-relaxed">Menghadirkan dekorasi premium dengan bahan-bahan terbaik, menciptakan suasana yang memukau dan elegan untuk hari istimewa Anda.</p>
+                    <button class="luxury-button py-3 px-8 rounded-full text-sm shadow-md">Lihat Inspirasi</button>
+                </div>
+                <div class="luxury-card p-10 rounded-2xl text-center shadow-2xl">
+                    <div class="mb-8">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/af0be677-f04e-4f22-bccc-9da5acf8b529.png" alt="Refined coordination team in tuxedos and gowns expertly managing an upscale wedding reception with caviar stations, fine champagne, and synchronised lighting displays in a palatial dining hall" class="w-full h-56 object-cover rounded-xl mb-6 shadow-lg" />
+                    </div>
+                    <h3 class="text-2xl font-bold mb-6 gold-accent tracking-wide">Koordinasi VIP Tanpa Cela</h3>
+                    <p class="text-gray-600 mb-6 font-light leading-relaxed">Tim profesional kami memastikan setiap detil acara berjalan mulus, memberikan Anda ketenangan dan pengalaman tak terlupakan.</p>
+                    <button class="luxury-button py-3 px-8 rounded-full text-sm shadow-md">Hubungi Tim</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Salon Potong Rambut Section -->
+    <section id="salon" class="section-bg-gray py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl font-light text-center mb-16 gold-accent tracking-wide">Salon Potong Rambut Premium</h2>
+            <p class="text-center text-gray-700 mb-16 max-w-4xl mx-auto text-lg font-light leading-relaxed">Nikmati layanan salon kelas dunia dengan stylist berpengalaman yang menggabungkan teknik modern dan produk organik terbaik untuk hasil yang memukau dan sehat.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="luxury-card p-10 rounded-2xl text-center shadow-2xl">
+                    <div class="mb-8">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/53254cb6-b797-4068-868e-f74637571327.png" alt="Intimate spa-style hair salon with plush massage chairs, warm ambient lighting, artisanal scissors, and serene atmosphere featuring marble counters, herbal fragrances, and personalized styling mirrors" class="w-full h-56 object-cover rounded-xl mb-6 shadow-lg" />
+                    </div>
+                    <h3 class="text-2xl font-bold mb-6 gold-accent tracking-wide">Potong Rambut Kustom & Artistik</h3>
+                    <p class="text-gray-600 mb-6 font-light leading-relaxed">Potongan rambut yang dirancang khusus untuk menonjolkan karakter dan gaya Anda dengan sentuhan seni dan presisi.</p>
+                    <button class="luxury-button py-3 px-8 rounded-full text-sm shadow-md">Reservasi Jadwal</button>
+                </div>
+                <div class="luxury-card p-10 rounded-2xl text-center shadow-2xl">
+                    <div class="mb-8">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/02522e53-6a8a-4885-bcaa-44934a4a3aec.png" alt="Elegant spa chamber for premium hair treatments with heated therapy stations, aromatherapy diffusers, organic masks, and plush robes in a room adorned with fresh orchids and soft candlelight" class="w-full h-56 object-cover rounded-xl mb-6 shadow-lg" />
+                    </div>
+                    <h3 class="text-2xl font-bold mb-6 gold-accent tracking-wide">Therapi Rambut Mewah & Relaksasi</h3>
+                    <p class="text-gray-600 mb-6 font-light leading-relaxed">Perawatan rambut dengan teknologi terbaru dan bahan alami untuk kesehatan dan kilau maksimal.</p>
+                    <button class="luxury-button py-3 px-8 rounded-full text-sm shadow-md">Jadwalkan Sesi</button>
+                </div>
+                <div class="luxury-card p-10 rounded-2xl text-center shadow-2xl">
+                    <div class="mb-8">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ca1865e4-1cc9-4e58-a2dc-cb5987d74ee0.png" alt="Private VIP styling suite with designer makeup palettes, crystal hair accessories, soft glowing lights, and luxurious mirrors for bespoke bridal beauty transformations in an opulent setting" class="w-full h-56 object-cover rounded-xl mb-6 shadow-lg" />
+                    </div>
+                    <h3 class="text-2xl font-bold mb-6 gold-accent tracking-wide">Styling Bridal VIP & Makeup Eksklusif</h3>
+                    <p class="text-gray-600 mb-6 font-light leading-relaxed">Transformasi penampilan pengantin dengan sentuhan glamor dan profesionalisme dari makeup artist terbaik.</p>
+                    <button class="luxury-button py-3 px-8 rounded-full text-sm shadow-md">Pesan Paket</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section-bg-white py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl font-light text-center mb-16 gold-accent tracking-wide">Testimoni Para Klien Mewah</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="luxury-card p-8 rounded-2xl shadow-xl">
+                    <p class="text-gray-700 mb-6 italic font-light leading-relaxed">"Mbk Khot bukan sekadar wedding organizer, mereka adalah arsitek mimpi. Setiap detail dipoles dengan sempurna, membuat hari kami benar-benar magis."</p>
+                    <div class="divider mb-4"></div>
+                    <p class="font-semibold gold-accent tracking-wide">- Puri Sari, Pengantin Bahagia</p>
+                </div>
+                <div class="luxury-card p-8 rounded-2xl shadow-xl">
+                    <p class="text-gray-700 mb-6 italic font-light leading-relaxed">"Salon ini lebih dari tempat, ini adalah destinasi keindahan. Setiap kunjungan saya merasa dirajakan, dengan hasil yang selalu melebihi ekspektasi."</p>
+                    <div class="divider mb-4"></div>
+                    <p class="font-semibold gold-accent tracking-wide">- Reza Ahmad, CEO Eksekutif</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section-bg-gray py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl font-light text-center mb-16 gold-accent tracking-wide">Galeri Mewah Kami</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="gallery-item">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/8387dc36-91c5-4d63-ad25-c5b9d68b389a.png" alt="Splendid bridal portrait featuring intricate gown with gold embroidery, crystal-studded veil, and diamond earrings in a royal garden setting with marble fountains and floral arches under soft twilight lighting" class="w-full h-72 object-cover rounded-2xl shadow-2xl" />
+                </div>
+                <div class="gallery-item">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/beb1b1e7-c203-4d5f-a3cc-e72780e4bad7.png" alt="Refined groom portrait in a bespoke tweed suit with onyx cufflinks, precise haircut with side part, and confident pose in a luxurious photo studio with ambient lighting and velvet backdrops" class="w-full h-72 object-cover rounded-2xl shadow-2xl" />
+                </div>
+                <div class="gallery-item">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/524f04f4-d84e-430e-b4a8-053e050f513e.png" alt="Exquisite bridal bouquet composed of exotic orchids, swaths of peonies, delicate pearls, and satin ribbons arranged by a master florist in an elegant crystal vase amidst soft candlelight" class="w-full h-72 object-cover rounded-2xl shadow-2xl" />
+                </div>
+                <div class="gallery-item">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/06903c5c-88c0-4946-bc38-bc2414c18850.png" alt="Innovative hair styling exhibit in a chic salon featuring avant-garde cuts on mannequins with platinum tones, velvet draperies, designer chairs, and dramatic lighting highlighting volume and texture" class="w-full h-72 object-cover rounded-2xl shadow-2xl" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-black text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-5xl font-light mb-12 gold-accent tracking-wide">Hubungi Mewah Kami</h2>
+            <p class="text-white opacity-90 mb-16 max-w-3xl mx-auto text-lg font-light">Bergabunglah dengan para klien eksklusif kami dan mulailah perjalanan Anda menuju keanggunan yang tak tertandingi.</p>
+            <div class="flex flex-col md:flex-row justify-center space-y-8 md:space-y-0 md:space-x-16 mb-12">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 tracking-wide">Lokasi Eksklusif</h3>
+                    <p>Jl. Mewah Boulevard No. 123, Kota Megapolis</p>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 tracking-wide">Kontak Premium</h3>
+                    <p>+62 8123 4567 89 | info@mbkkhotmewah.com</p>
+                </div>
+            </div>
+            <button class="luxury-button py-4 px-12 rounded-full text-xl shadow-2xl mr-6">Jadwalkan Konsultasi VIP</button>
+            <button class="bg-transparent border-2 border-gold-500 hover:bg-gold-500 hover:text-black text-gold-500 py-4 px-12 rounded-full text-xl transition duration-300 shadow-lg">Kunjungi Kita</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-black text-white">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-lg mb-6 tracking-wide">© 2023 Mbk Khot Rias & Salon. Pengalaman Mewah untuk Generasi Terpilih.</p>
+            <div class="flex justify-center space-x-10">
+                <a href="#" class="hover:text-gold-500 transition text-lg">Facebook</a>
+                <a href="#" class="hover:text-gold-500 transition text-lg">Instagram</a>
+                <a href="#" class="hover:text-gold-500 transition text-lg">WhatsApp</a>
+                <a href="#" class="hover:text-gold-500 transition text-lg">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu -->
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+
+</body>
+</html>
+</content>
+</create_file>
